@@ -1,7 +1,8 @@
 var inquirer = require('inquirer');
+var Word = require('./word.js');
 
 var guesses = [];
-var blanks = ['_', '_', '_', '_' ]
+var blanks;
 
 inquirer.prompt([
 	{
@@ -27,7 +28,10 @@ var guess = function() {
 	// 	console.log('\nNicely done!\n');
 	// }
 		else {
-		//Do function to get random word as string of blanks
+		var country = new Word();
+		country.pickCountry();
+		blanks = country.blanksArray;
+		
 		inquirer.prompt([
 			{
 				name: 'guess',
