@@ -11,7 +11,7 @@ var Word = function() {
 			this.nameArray.push(this.countryName[i]);
 		}
 
-		for (var i = this.countryName.length; i >= 0; i--) {
+		for (var i = this.countryName.length; i > 0; i--) {
 			this.blanksArray.push('_');
 		}
 	}
